@@ -9,7 +9,7 @@ NextClosure calculates closures in lectic ordering to ensure every concept appea
 
 Rather than using redundancy checking, we keep as many closures as possible in each iteration; All closures are maintained and used to generate the next batch of closures. MRGanter+ has a Map method which calculates local concepts by working on previous concept and local data partition. The Reduce method in MRGanter+ merges local closures first in Line \ref{mrganterplus_merging}, and then recursively examines if they already exist in the set of global formal concepts H. The set H is used to fast index and search a specified closure; it is designed as a two-level hash table to reduce its costs. The first level is indexed by the head attribute of the closure, while the second level is indexed by the length of the closure.
 
-For more details about MRGanter+, please see our recent publication: Distributed Formal Concept Analysis Algorithms Based on an Iterative MapReduce Framework. To know how MapReduce works please refer to "MapReduce Simplified Data Processing on Large Clusters"
+For more details about MRGanter+, please see our recent publication: Distributed Formal Concept Analysis Algorithms Based on an Iterative MapReduce Framework. To know how MapReduce works please refer to "MapReduce Simplified Data Processing on Large Clusters" at http://www.springerlink.com/content/02p8282703rx0m78/.
 
 2. Sample Data
 
