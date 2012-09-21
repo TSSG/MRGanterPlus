@@ -57,11 +57,12 @@ Some steps are needed in order to run MRGanter+ on your machine(s).
 2. Enable the ssh on your system and it should be configured to be connecting between machines without password. A sample solution can be viewed at http://www.linuxquestions.org/questions/linux-newbie-8/ssh-with-password-533684/.
 	For the case of single machine, eventaully you should be able to access itself by "ssh localhost". Don't forget to install ssh-server, otherwise you will get an error like this: "ssh: connect to host localhost port 22: Connection refused".
 3. Setting up NaradaBrokering
-	Before Twister installation, first download NaradaBrokering and unzip it to another directory. We call this $NBHOME. Configure this environment variable in /etc/environment by adding: NBHOME="/home/username/NaradaBrokering-4.2.2". The official tutorial of Twister suggests you to configure this in .bashrc file. However it turns out to be incorrect for Ubuntu system.
+<br>Before Twister installation, first download NaradaBrokering and unzip it to another directory. We call this $NBHOME. Configure this environment variable in /etc/environment by adding: NBHOME="/home/username/NaradaBrokering-4.2.2". The official tutorial of Twister suggests you to configure this in .bashrc file. However it turns out to be incorrect for Ubuntu system.
 4. Setting up Twister
-	Unzip the Twister.zip file to some directory. Then set environment variable named TWISTER_HOME pointing to this directory. As we did to NaradaBrokering, you should also add the following line to /etc/environment.
+<br>Unzip the Twister.zip file to some directory. Then set environment variable named TWISTER_HOME pointing to this directory. As we did to NaradaBrokering, you should also add the following line to /etc/environment.
+		
 		TWISTER_HOME ="/home/username/twister-0.8"
-	Now you need to set few configuration parameters as follows.
+<br>Now you need to set few configuration parameters as follows.
 	* Edit $TWISTER_HOME/bin/twister.properties file as follows:
 	<br>nodes_file = /home/username/twister-0.8/bin/nodes
 	<br>daemons_per_node = 1
