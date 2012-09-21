@@ -17,18 +17,18 @@ Or you can find a presentaion introducing MRGanter+ which we made on ICFCA 2012:
 To be used by MRGanter+, we patition a single file data in a horizontal way and specify their number of objects/records and the number of attributes. Below is a simple example.
 
 Data partition 1
-3
-7
-1 1 0 1 0 1 0
-1 0 1 0 1 0 1
-0 1 1 1 0 1 1
+		3
+		7
+		1 1 0 1 0 1 0
+		1 0 1 0 1 0 1
+		0 1 1 1 0 1 1
 
 Data partition 2
-3
-7
-0 1 0 1 1 0 0
-1 0 0 1 1 1 0
-0 1 1 0 0 1 1
+		3
+		7
+		0 1 0 1 1 0 0
+		1 0 0 1 1 1 0
+		0 1 1 0 0 1 1
 
 For testing purpose, we attached the well-known mushroom data, which is partitioned to 2 files, with source file. Appearently, you need to send each of them to a node when you have 2 nodes.
 
@@ -36,7 +36,7 @@ For testing purpose, we attached the well-known mushroom data, which is partitio
 
 This algorithm implementation is tested with Twister 0.8 which requires Linux operating system. To compile MRGanterPlus some Java libraries are needed.
 
-  Twister-0.8.jar
+  	Twister-0.8.jar
 	NaradaBrokering.jar
 	jug-asl-2.0.0
 	jug-uuid.jar
