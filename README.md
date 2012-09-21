@@ -1,8 +1,9 @@
 #MRGanter+: Distributed FCA Algorithm Based on Twister#
 
-Release 1.3
+	Release 1.3
+	By Biao Xu at TSSG, WIT
 
-1. Intoduction
+1.  Intoduction
 
 MRGanter+is a distributed Formal Concept Analysis algorithm based on Gater's algorithm (as known as NextClosure) and an iterative MapReduce framework, Twister.
 NextClosure calculates closures in lectic ordering to ensure every concept appears only once. This approach allows a single concept to be tested with the closure validation condition during each iteration. This is efficient when the algorithm runs on a single machine. For multi-machine computation, the extra computation and redundancy resulting from keeping  only one concept after each iteration across many machines is costly. We modify NextClosure to reduce the number of iterations and name the corresponding distributed algorithm MRGanter+.
@@ -12,7 +13,7 @@ Rather than using redundancy checking, we keep as many closures as possible in e
 For more details about MRGanter+, please see our recent publication: Distributed Formal Concept Analysis Algorithms Based on an Iterative MapReduce Framework. To know how MapReduce works please refer to "MapReduce Simplified Data Processing on Large Clusters" at http://www.springerlink.com/content/02p8282703rx0m78/.
 Or you can find a presentaion introducing MRGanter+ which we made on ICFCA 2012: http://www.econ.kuleuven.be/ICFCA/present/Biao_Xu.pdf
 
-2. Sample Data
+2.  Sample Data
 
 To be used by MRGanter+, we patition a single file data in a horizontal way and specify their number of objects/records and the number of attributes. Below is a simple example.
 
