@@ -13,7 +13,7 @@ Rather than using redundancy checking, we keep as many closures as possible in e
 For more details about MRGanter+, please see our recent publication: 
 > Distributed Formal Concept Analysis Algorithms Based on an Iterative MapReduce Framework.
 
-at http://www.springerlink.com/content/02p8282703rx0m78/
+at http://www.springerlink.com/content/02p8282703rx0m78/. And you can download the author's self-archiving version of this publication from http://archive.org/details/DistributedFormalConceptAnalysisAlgorithmsBasedOnAnIterativeMapreduce.
 <br>To know how MapReduce works please refer to "MapReduce Simplified Data Processing on Large Clusters" at http://static.usenix.org/event/osdi04/tech/full_papers/dean/dean.pdf.
 <br>Or you can find a presentaion introducing MRGanter+ which we made on ICFCA 2012: http://www.econ.kuleuven.be/ICFCA/present/Biao_Xu.pdf
 
