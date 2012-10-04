@@ -11,7 +11,23 @@ NextClosure calculates closures in lectic ordering to ensure every concept appea
 Rather than using redundancy checking, we keep as many closures as possible in each iteration; All closures are maintained and used to generate the next batch of closures. MRGanter+ has a Map method which calculates local concepts by working on previous concept and local data partition. The Reduce method in MRGanter+ merges local closures first in Line \ref{mrganterplus_merging}, and then recursively examines if they already exist in the set of global formal concepts H. The set H is used to fast index and search a specified closure; it is designed as a two-level hash table to reduce its costs. The first level is indexed by the head attribute of the closure, while the second level is indexed by the length of the closure.
 
 For more details about MRGanter+, please see our recent publication: 
-> Distributed Formal Concept Analysis Algorithms Based on an Iterative MapReduce Framework.
+	
+	Distributed Formal Concept Analysis Algorithms Based on an Iterative MapReduce Framework:
+	@incollection{,
+	year={2012},
+	isbn={978-3-642-29891-2},
+	booktitle={Formal Concept Analysis},
+	volume={7278},
+	series={Lecture Notes in Computer Science},
+	editor={Domenach, Florent and Ignatov, DmitryI. and Poelmans, Jonas},
+	doi={10.1007/978-3-642-29892-9_26},
+	title={Distributed Formal Concept Analysis Algorithms Based on an Iterative MapReduce Framework},
+	url={http://dx.doi.org/10.1007/978-3-642-29892-9_26},
+	publisher={Springer Berlin Heidelberg},
+	keywords={Formal Concept Analysis; Distributed Mining; MapReduce},
+	author={Xu, Biao and Fréin, Ruairí and Robson, Eric and Ó Foghlú, Mícheál},
+	pages={292-308}
+	}
 
 at http://www.springerlink.com/content/02p8282703rx0m78/. And you can download the author's self-archiving version of this publication from http://archive.org/details/DistributedFormalConceptAnalysisAlgorithmsBasedOnAnIterativeMapreduce.
 <br>To know how MapReduce works please refer to "MapReduce Simplified Data Processing on Large Clusters" at http://static.usenix.org/event/osdi04/tech/full_papers/dean/dean.pdf.
