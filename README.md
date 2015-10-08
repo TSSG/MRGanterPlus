@@ -67,36 +67,36 @@ This algorithm implementation is tested with Twister 0.8 which requires Linux op
 
 ##Installation and Configuration##
 
-Some steps are needed in order to run MRGanter+ on your machine(s).
+Few steps are needed in order to run MRGanter+ on your machine(s).
 
 1. Ensure you are using Linux system or Mac OS. We tested MRGanter+ on Ubuntu 11.04.
 2. Enable the ssh on your system and it should be configured to be connecting between machines without password. A sample solution can be viewed at http://www.linuxquestions.org/questions/linux-newbie-8/ssh-with-password-533684/.
 	For the case of single machine, eventaully you should be able to access itself by "ssh localhost". Don't forget to install ssh-server, otherwise you will get an error like this: "ssh: connect to host localhost port 22: Connection refused".
-3. Setting up NaradaBrokering
+3. Set up NaradaBrokering
 <br>Before Twister installation, first download NaradaBrokering and unzip it to another directory. We call this $NBHOME. Configure this environment variable in /etc/environment by adding: NBHOME="/home/username/NaradaBrokering-4.2.2". The official tutorial of Twister suggests you to configure this in .bashrc file. However it turns out to be incorrect for Ubuntu system.
 4. Setting up Twister
 <br>Unzip the Twister.zip file to some directory. Then set environment variable named TWISTER_HOME pointing to this directory. As we did to NaradaBrokering, you should also add the following line to /etc/environment.
 		
 		TWISTER_HOME ="/home/username/twister-0.8"
 <br>Now you need to set few configuration parameters as follows.
-	* Edit $TWISTER_HOME/bin/twister.properties file as follows:
+	* Edit `$TWISTER_HOME/bin/twister.properties` file as follows:
 	<br>nodes_file = /home/username/twister-0.8/bin/nodes
 	<br>daemons_per_node = 1
 	<br>workers_per_daemon = 2
-	<br>app_dir = /home/username/twister-0.8/apps
-	<br>data_dir = /home/username/twister-0.8/data
-	* Edit $TWISTER_HOME/bin/nb.properties file and set broker_host to the IP of the machine where you setup NaradaBrokering. They are could be the same if you like.
-	+ Edit $TWISTER_HOME/bin/nodes file and add your local IP address to this file. In a single machine setup you should have only one IP address in this file, in the cluster setup this file will have all the IP addresses of the compute nodes.
+	<br>`app_dir = /home/username/twister-0.8/apps`
+	<br>`data_dir = /home/username/twister-0.8/data`
+	* Edit `$TWISTER_HOME/bin/nb.properties` file and set broker_host to the IP of the machine where you setup NaradaBrokering. They are could be the same if you like.
+	+ Edit `$TWISTER_HOME/bin/nodes` file and add your local IP address to this file. In a single machine setup you should have only one IP address in this file, in the cluster setup this file will have all the IP addresses of the compute nodes.
 5. JVM
-<br>By default, the shell files such as start_twister.sh and stop_twister.sh in $TWISTER_HOME/bin are not runnable. You need to  change their properties as by choosing "Allow executing file as program" (on Ubuntu). 
-<br>Also, you have to adjust the JVM parameters for Twister runtime. Edit $TWISTER_HOME/bin/stimr.sh file, and change -Xmx40000m to whatever value suits your situation.
+<br>By default, the shell files such as start_twister.sh and stop_twister.sh in `$TWISTER_HOME/bin` are not runnable. You need to  change their properties as by choosing "Allow executing file as program" (on Ubuntu). 
+<br>Also, you have to adjust the JVM parameters for Twister runtime. Edit `$TWISTER_HOME/bin/stimr.sh` file, and change `-Xmx40000m` to whatever value suits your situation.
 
 ##Run##
 
-1. Export MRGanter+ as runnable JAR file. If you use eclipse, please select "Package required libraries into generated JAR" for Library handling option. Of course you could use MRGanter+.jar file coming with source code. Now Place MRGanter+.jar to $TWISTER_HOME/apps.
+1. Export MRGanter+ and everything in the directory as runnable JAR file. If you use eclipse, please select "Package required libraries into generated JAR" for Library handling option. Of course you could use MRGanter+.jar file coming with source code. Now Place `MRGanter+.jar` to `$TWISTER_HOME/apps`.
 2. Start NaradaBrokering by running startbr.sh at its home directory.
 3. Start Twister runtime by running:
-		$TWISTER_HOME/bin/start_twister.sh
+		`$TWISTER_HOME/bin/start_twister.sh`
 	Note that, "sh start_twister.sh" will not work.
 4. Run $TWISTER_HOME/bin/create_partition_file.sh to create partition files for testing datasets. Take mushtoom for example,
 
