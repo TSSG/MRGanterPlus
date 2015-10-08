@@ -93,18 +93,18 @@ Few steps are needed in order to run MRGanter+ on your machine(s).
 
 ##Run##
 
-1. Export MRGanter+ and everything in the directory as runnable JAR file. If you use eclipse, please select "Package required libraries into generated JAR" for Library handling option. Of course you could use MRGanter+.jar file coming with source code. Now Place `MRGanter+.jar` to `$TWISTER_HOME/apps`.
+1. Export MRGanter+ and everything in the directory as runnable JAR file. If you use eclipse, please select "Package required libraries into generated JAR" for Library handling option. Of course you could use `MRGanter+.jar` file coming with source code. Now Place `MRGanter+.jar` to `$TWISTER_HOME/apps`.
 2. Start NaradaBrokering by running startbr.sh at its home directory.
 3. Start Twister runtime by running:
 		`$TWISTER_HOME/bin/start_twister.sh`
 	Note that, "sh start_twister.sh" will not work.
-4. Run $TWISTER_HOME/bin/create_partition_file.sh to create partition files for testing datasets. Take mushtoom for example,
+4. Run `$TWISTER_HOME/bin/create_partition_file.sh` to create partition files for testing datasets. Take mushtoom for example,
 
 		./create_partition_file.sh ../data mushroom01 ../data/mushroom.pf
 
 	Note that, you need to change the filter (the middle parameter) to mushroom if you want to create partition files for many data partitions.
 
-	Now you are ready to run MRGanter+. Go to $TWISTER_HOME/apps/ and execute run_MRGanter+.sh in below way:
+	Now you are ready to run MRGanter+. Go to `$TWISTER_HOME/apps/` and execute `run_MRGanter+.sh` in below way:
 
 		./run_MRGanter+.sh 1 ../data/mushroom.pf
 
